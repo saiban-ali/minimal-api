@@ -1,0 +1,43 @@
+{
+  "name": "minimal-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "minimal",
+    "api",
+    "express",
+    "typescript",
+    "nodejs",
+    "node",
+    "js",
+    "javascript",
+    "rest",
+    "restful",
+    "restful-api"
+  ],
+  "author": "saiban-ali",
+  "license": "MIT",
+  "homepage": "https://github.com/saiban-ali/minimal-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saiban-ali/minimal-api"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "eslint": "^8.56.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^3.0.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
