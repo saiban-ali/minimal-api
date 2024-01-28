@@ -12,6 +12,7 @@ export type CorsConfig = {
 export type CreateServerConfig = {
   port?: number;
   cors?: true | CorsConfig;
+  serverOptions?: http.ServerOptions;
 };
 
 export type Method = "get" | "post" | "put" | "delete" | "patch" | "head";

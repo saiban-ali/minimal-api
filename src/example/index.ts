@@ -1,4 +1,4 @@
-import { createServer } from "../../dist/index";
+import { createServer } from "../index";
 
 const port = 4000;
 

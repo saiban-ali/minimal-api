@@ -1,4 +1,4 @@
-import http from "http";
+import http, { RequestListener } from "http";
 import { cors } from "./helpers/cors";
 import { createMinimalRequest } from "./helpers/request";
 import {
@@ -24,7 +24,7 @@ function createServer(
   const callback =
     typeof configOrCallback === "function" ? configOrCallback : callbackArg;
 
-  const server = http.createServer(async (request, response) => {
+  const serverCallback: RequestListener = async (request, response) => {
     // Set CORS headers
 
     if (config?.cors) {
@@ -85,7 +85,11 @@ function createServer(
 
       response.end(data);
     });
-  });
+  };
+
+  const serverOptions = config?.serverOptions ?? {};
+
+  const server = http.createServer(serverOptions, serverCallback);
 
   const port = config?.port ?? 4000;
 
