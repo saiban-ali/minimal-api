@@ -5,4 +5,8 @@ node_modules
 DS_Store
 
 tsconfig.json
-tsup.config.js
+tsup.config.ts
+
+.github
+
+.eslintrc.json
